@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vemmo</title>
+</head>
+
+<body>
+    <div id="paypal-button-container"></div>
+</body>
+<script
+    src="https://www.paypal.com/sdk/js?client-id=AchTfKPZ63RsoGphmZ6raWmdFHmFLVti_MgkoS3DzyObK70O54lSYKl0KCuB_ctgRjj3_2LPEssVP9ac&currency=USD&enable-funding=venmo">
+</script>
+
+<script>
+    const style = {
+        color: 'gold',
+        height: 55,
+        layout: 'vertical',
+        size: 'medium',
+        shape: 'rect',
+        tagline: false,
+        fundingicons: 'false'
+    }
+
+    // Render the Venmo button into #paypal-button-container
+    paypal.Buttons({
+        style: style
+    }).render('#paypal-button-container')
+</script>
+
+</html>
